@@ -199,6 +199,11 @@ body {
 	animation: scale 3s linear infinite;
 	z-index: -1;
 }
+a {
+	text-align: end;
+	color: inherit;
+	text-decoration: none;
+}
 
 @keyframes scale {
 	0%,
