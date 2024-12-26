@@ -1,0 +1,117 @@
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	overflow-x: hidden;
+}
+
+.newsfeed {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.header {
+	text-align: center;
+	background: #222;
+	color: #fff;
+	padding: 15px 0;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
+.post {
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 3px solid #000;
+	overflow: hidden;
+	box-shadow: 6px 6px #000;
+}
+
+.post-slider {
+	display: flex;
+	width: 100%;
+	transition: transform 0.3s ease-in-out;
+}
+
+.post-image {
+	width: 100%; /* Adjust image to the full width of the slider */
+	height: auto; /* Let the height adjust according to the image aspect ratio */
+	object-fit: cover; /* Maintain aspect ratio */
+	flex-shrink: 0; /* Prevent shrinking */
+	border-radius: 4px;
+}
+#slider-2 .post-image {
+	width: 100%; /* Adjust image to the full width of the slider */
+	object-fit: contain; /* Maintain aspect ratio */
+	flex-shrink: 0; /* Prevent shrinking */
+	border-radius: 4px;
+}
+
+.post-caption {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+	color: #333;
+	margin-top: 10px;
+	text-align: left;
+	padding: 5px;
+}
+
+.post-actions {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+}
+.prev-btn {
+	left: 10px;
+}
+.next-btn {
+	right: 10px;
+}
+
+.btn.like-btn {
+	background: none;
+	border: 3px solid #222; /* Default border color */
+
+	box-shadow: 6px 6px #000;
+	font-size: 1.2em; /* Adjust font size for consistency */
+	cursor: pointer;
+	color: #222;
+	padding: 6px 12px; /* Adjust padding for consistent size */
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for background, color, and border */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn.like-btn:hover {
+	transition: box-shadow 0 0 #000 0.3s ease-in-out;
+}
+
+.btn span {
+	transition: color 0.3s;
+}
+
+.btn.liked {
+	background-color: #7dfaff; /* Set background color when liked */
+	border-color: #000; /* Change border color to match the background */
+}
+
+@media (max-width: 768px) {
+	.post-caption {
+		font-size: 0.9em;
+	}
+}
